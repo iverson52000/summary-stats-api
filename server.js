@@ -9,7 +9,7 @@ app.use(cors())
 app.use(bodyParser.json());
 
 //test if server is working
-app.get('/', (req, res)=> { 
+app.get('/', (req, res) => { 
   res.send('it is working') 
 })
 
