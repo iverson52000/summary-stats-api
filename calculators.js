@@ -1,4 +1,4 @@
-//Functions for claculating mean, mdeian, mode
+//Functions for claculating mean, median, mode
 
 function mean(nums) {
     var total = 0, i;
