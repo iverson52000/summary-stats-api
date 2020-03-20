@@ -19,8 +19,7 @@ function median(nums) {
         // average of two middle nums
         median = (nums[numsLen / 2 - 1] + nums[numsLen / 2]) / 2;
     } else { 
-        // is odd
-        // middle number only
+        // is odd => middle number only
         median = nums[(numsLen - 1) / 2];
     }
  

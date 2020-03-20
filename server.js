@@ -15,18 +15,18 @@ app.get('/', (req, res)=> {
 
 //FE will send post request
 app.post('/', (req, resp) => {
-  try{
+  try {
     let array = req.body;
     console.log(array)
     results = [calculators.mean(array), calculators.median(array), calculators.mode(array)];
     resp.send(results)
-  } catch (err){
+  } catch (err) {
     resp.status(400).json('error occured')
   }
 })
 
 
-app.listen(3001, ()=> {
+app.listen(3001, () => {
   console.log(`app is running on port 3001`);
 })
 
