@@ -6,8 +6,8 @@
 3. Run `npm start`
 
 ## Files
-* Calculaotrs.js: Functions for claculating mean, median, mode
-* Server.js: Create Restful API with express.js
+* calculaotrs.js: Functions for claculating mean, median, mode
+* server.js: Create Restful API with express.js
 
 ## Statitics Calculation Function
 Mean
