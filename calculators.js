@@ -1,15 +1,18 @@
 //Functions for claculating mean, median, mode
 
 function mean(nums) {
-    var total = 0, i;
-    for (i = 0; i < nums.length; i += 1) {
+    let total = 0;
+
+    for (let i = 0; i < nums.length; i += 1) {
         total += nums[i];
     }
+
     return total / nums.length;
 }
 
 function median(nums) {
-    var median = 0, numsLen = nums.length;
+    let median = 0;
+    let numsLen = nums.length;
     nums.sort();
  
     if (
@@ -30,28 +33,28 @@ function mode(nums) {
     // as result can be bimodal or multi-modal,
     // the returned result is provided as an array
     // mode of [3, 5, 4, 4, 1, 1, 2, 3] = [1, 3, 4]
-    var modes = [], count = [], i, number, maxIndex = 0;
+    let modes = [];
+    let counts = {};
+    let maxCount = 0;
  
-    for (i = 0; i < nums.length; i += 1) {
-        number = nums[i];
-        count[number] = (count[number] || 0) + 1;
-        if (count[number] > maxIndex) {
-            maxIndex = count[number];
+    for (let i = 0; i < nums.length; i += 1) {
+        num = nums[i];
+        counts[num] = (counts[num] || 0) + 1;
+        if (counts[num] > maxCount) {
+            maxCount = counts[num];
         }
     }
  
-    for (i in count)
-        if (count.hasOwnProperty(i)) {
-            if (count[i] === maxIndex) {
-                modes.push(Number(i));
-            }
-        }
- 
+    for (num in counts) {
+        if (counts[num] === maxCount) {
+            modes.push(num);
+        };
+    }
     return modes;
 }
 
 module.exports = {
   mean: mean,
   median: median,
-  mode: mode
+  mode: mode,
 };
