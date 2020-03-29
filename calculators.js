@@ -12,7 +12,7 @@ function mean(nums) {
 
 function median(nums) {
     let median = 0;
-    let numsLen = nums.length;
+    const numsLen = nums.length;
     nums.sort();
  
     if (
@@ -44,9 +44,9 @@ function mode(nums) {
             maxCount = counts[num];
         }
     }
- 
-    for (num in counts) {
-        if (counts[num] === maxCount) {
+    const entries = Object.entries(counts)
+    for (const [num, count] of entries) {
+        if (count === maxCount) {
             modes.push(num);
         };
     }

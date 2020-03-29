@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 //FE will send post request
 app.post('/', (req, resp) => {
   try {
-    let array = req.body;
+    const array = req.body;
     console.log(array);
     results = [calculators.mean(array), calculators.median(array), calculators.mode(array)];
     resp.send(results);
