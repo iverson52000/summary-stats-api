@@ -10,19 +10,19 @@
 * server.js: Create Restful API with express.js
 
 ## Statitics Calculation Function
-Mean()
+mean()
 * Return float
 * DS/Algo: Array traversal
 * Time/Space complexity: O(n)/O(1)
 
-Median()
+median()
 * Return int
 * DS/Algo: Array/sorting
 * Time/Space complexity: O(nlogn) for sorting/O(1)
 
-Mode()
+mode()
 * Return array if there's multiple modes
-* DS/Algo: Array traversal
+* DS/Algo: Hashmap/Array traversal
 * Time/Space complexity: O(n)/O(n)
 
 
