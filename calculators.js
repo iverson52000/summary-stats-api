@@ -1,6 +1,8 @@
 //Functions for claculating mean, median, mode
 
 function mean(nums) {
+    if (nums.length === 0) return 0
+
     let total = 0;
 
     for (let i = 0; i < nums.length; i += 1) {
@@ -11,6 +13,8 @@ function mean(nums) {
 }
 
 function median(nums) {
+    if (nums.length === 0) return 0
+
     let median = 0;
     const numsLen = nums.length;
     nums.sort();
@@ -33,6 +37,8 @@ function mode(nums) {
     // as result can be bimodal or multi-modal,
     // the returned result is provided as an array
     // mode of [3, 5, 4, 4, 1, 1, 2, 3] = [1, 3, 4]
+    if (nums.length === 0) return 0
+
     let modes = [];
     let counts = {};
     let maxCount = 0;
@@ -47,7 +53,7 @@ function mode(nums) {
     const entries = Object.entries(counts)
     for (const [num, count] of entries) {
         if (count === maxCount) {
-            modes.push(num);
+            modes.push(Number(num));
         };
     }
     return modes;

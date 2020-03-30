@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
   },
   "description": "",
   "devDependencies": {
+    "jest": "^25.2.4",
     "nodemon": "^2.0.2"
   }
 }
