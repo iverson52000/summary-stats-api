@@ -22,3 +22,9 @@ it('test mode', () => {
   expect(calculators.mode(nums2)).toEqual([1, 2, 3]);
   expect(calculators.mode(nums3)).toEqual([1]);
 })
+
+it('test std', () => {
+  expect(calculators.std(nums1)).toEqual(0);
+  expect(calculators.std(nums2)).toEqual(0.66666);
+  expect(calculators.std(nums3)).toEqual(0);
+})

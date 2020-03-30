@@ -18,7 +18,12 @@ app.post('/', (req, resp) => {
   try {
     const array = req.body;
     console.log(array);
-    results = [calculators.mean(array), calculators.median(array), calculators.mode(array)];
+    results = [
+      calculators.mean(array), 
+      calculators.median(array), 
+      calculators.mode(array), 
+      calculators.std(array)
+      ];
     resp.send(results);
   } catch (err) {
     resp.status(400).json('error occured');

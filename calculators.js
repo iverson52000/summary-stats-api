@@ -1,7 +1,9 @@
 //Functions for claculating mean, median, mode
 
 function mean(nums) {
-    if (nums.length === 0) return 0
+    if (nums.length === 0) return 0;
+    if (nums.length == 1) return nums[0];
+    if (nums.length == 2) return median(nums);
 
     let total = 0;
 
@@ -12,6 +14,10 @@ function mean(nums) {
     return total / nums.length;
 }
 
+function isEven(length) {
+    return (length % 2 === 0);
+}
+
 function median(nums) {
     if (nums.length === 0) return 0
 
@@ -19,10 +25,7 @@ function median(nums) {
     const numsLen = nums.length;
     nums.sort();
  
-    if (
-        // is even
-        numsLen % 2 === 0 
-    ) {
+    if (isEven(nums.length)) {
         // average of two middle nums
         median = (nums[numsLen / 2 - 1] + nums[numsLen / 2]) / 2;
     } else { 
@@ -59,8 +62,21 @@ function mode(nums) {
     return modes;
 }
 
+function std(nums) {
+    if (nums.length === 0) return 0;
+    
+    const avg = mean(nums);
+    let residual = 0;
+    for (num of nums) {
+        residual += (num-avg)**2;
+    }
+    res = (residual/nums.length)**(0.5);
+    return res;
+}
+
 module.exports = {
   mean: mean,
   median: median,
   mode: mode,
+  std: std
 };
