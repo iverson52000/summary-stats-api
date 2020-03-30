@@ -8,6 +8,7 @@
 ## Files
 * calculaotrs.js: Functions for claculating mean, median, mode
 * server.js: Create Restful API with express.js
+* calculaotrs.test.js: unit tests for functions mean, median, mode
 
 ## Statitics Calculation Function
 mean()
