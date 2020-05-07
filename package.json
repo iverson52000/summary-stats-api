@@ -17,6 +17,7 @@
   "description": "",
   "devDependencies": {
     "jest": "^25.2.4",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.5"
   }
 }
