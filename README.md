@@ -5,6 +5,9 @@
 2. Run `npm install`
 3. Run `npm start`
 
+## Purpose
+The Back End API for Summary Stats Calculator web app
+
 ## Files
 * calculaotrs.js: Functions for claculating mean, median, mode
 * server.js: Create Restful API with express.js
