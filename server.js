@@ -1,7 +1,6 @@
 const express = require("express");
-// const bodyParser = require('body-parser');
 const cors = require("cors");
-const calculators = require("./calculators");
+const calculators = require(s"./calculators");
 
 const app = express();
 
