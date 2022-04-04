@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const calculators = require(s"./calculators");
+const calculators = require("./calculators");
 
 const app = express();
 
